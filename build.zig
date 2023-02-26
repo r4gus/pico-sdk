@@ -94,6 +94,17 @@ pub fn build(b: *std.build.Builder) void {
     lib.addCSourceFiles(&rp2_common_sources, &[_][]const u8{});
 
     lib.install();
+    lib.installHeadersDirectory("src/common/boot_picoboot/include/boot", "boot");
+    lib.installHeadersDirectory("src/common/boot_uf2/include/boot", "boot");
+    lib.installHeadersDirectory("src/common/pico_base/include", "");
+    lib.installHeadersDirectory("src/common/pico_binary_info/include/pico", "pico");
+    lib.installHeadersDirectory("src/common/pico_bit_ops/include/pico", "pico");
+    lib.installHeadersDirectory("src/common/pico_divider/include/pico", "pico");
+    lib.installHeadersDirectory("src/common/pico_stdlib/include/pico", "pico");
+    lib.installHeadersDirectory("src/common/pico_sync/include/pico", "pico");
+    lib.installHeadersDirectory("src/common/pico_time/include/pico", "pico");
+    lib.installHeadersDirectory("src/common/pico_usb_reset_interface/include/pico", "pico");
+    lib.installHeadersDirectory("src/common/pico_util/include/pico", "pico");
 }
 
 const common_sources = [_][]const u8{
