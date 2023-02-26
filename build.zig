@@ -4,7 +4,7 @@ pub fn build(b: *std.build.Builder) void {
     const optimize = b.standardOptimizeOption(.{});
 
     const lib = b.addStaticLibrary(.{
-        .name = "pico-sdk",
+        .name = "pico",
         .target = std.zig.CrossTarget{
             .cpu_arch = .thumb,
             .cpu_model = .{ .explicit = &std.Target.arm.cpu.cortex_m0plus },
