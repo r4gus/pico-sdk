@@ -3,3 +3,6 @@
 cmake-*
 .DS_Store
 build
+zig-cache
+zig-out
+*.swp
